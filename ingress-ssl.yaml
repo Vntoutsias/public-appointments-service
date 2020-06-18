@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-ssl
+spec:
+  rules:
+  - host: pas.vntoutsias.dns-cloud.net
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: fastapi-clip 
+          servicePort: 8000
+  tls:
+    - hosts: 
+      - pas.vntoutsias.dns-cloud.net
+      secretName: pas-tls-secret
