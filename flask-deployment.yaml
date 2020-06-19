@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pas-deployment
+  name: flask-deployment
 spec:
   replicas: 1
   selector:
@@ -19,4 +19,4 @@ spec:
             - containerPort: 5000 
           envFrom:
             - configMapRef:
-                name: fastapi-config
+                name: flask-config
