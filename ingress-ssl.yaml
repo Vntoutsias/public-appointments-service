@@ -9,8 +9,8 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: fastapi-clip 
-          servicePort: 8000
+          serviceName: flask-clip 
+          servicePort: 5000
   tls:
     - hosts: 
       - pas.vntoutsias.dns-cloud.net
